@@ -33,7 +33,7 @@ let result = price + taxFee
 print("result:", result) // 500
 
 /*
- 1. 다형성으로 Refactoring
+다형성으로 Refactoring
  */
 
 class MyBeer {
@@ -107,7 +107,3 @@ enum BeerBuilder {
 
 let result2 = BeerBuilder.createBeer(beer)?.total()
 print("result:", result2) // 500
-
-/*
- 1. 프로토콜을 사용하여 Refactoring
- */
