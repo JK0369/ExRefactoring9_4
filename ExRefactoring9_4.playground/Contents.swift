@@ -9,7 +9,7 @@ enum Beer {
 let beer = Beer.hite
 var price = 0
 var taxFee = 0
-var primium = false
+var premium = false
 
 switch beer {
 case .hoganda:
@@ -22,7 +22,7 @@ case .hite:
 case .heineken:
     print("this is heineken")
     price = 2000
-    if primium {
+    if premium {
         taxFee = 1000
     } else {
         taxFee = 500
@@ -74,19 +74,19 @@ class Hite: MyBeer {
 }
 
 class Heineken: MyBeer {
-    private let primium: Bool
+    private let premium: Bool
     
-    init?(beer: Beer, primium: Bool) {
+    init?(beer: Beer, premium: Bool) {
         guard beer == .heineken else { return nil }
         print("this is heineken")
-        self.primium = primium
+        self.premium = premium
     }
     
     override func getPrice() -> Int {
         2000
     }
     override func getTax() -> Int {
-        primium ? 1000 : 500
+        premium ? 1000 : 500
     }
 }
 
