@@ -97,13 +97,10 @@ enum BeerBuilder {
             return Hoganda(beer: beer)
         case .hite:
             return Hite(beer: beer)
-        case .hoganda:
-            return Hoganda(beer: beer)
+        case .heineken:
+            return Heineken(beer: beer)
         default:
             return nil
         }
     }
 }
-
-let result2 = BeerBuilder.createBeer(beer)?.total()
-print("result:", result2) // 500
